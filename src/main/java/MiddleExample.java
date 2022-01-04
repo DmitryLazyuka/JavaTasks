@@ -3,7 +3,8 @@ public class MiddleExample {
         int length = word.length();
         if (length % 2 == 0) {
             return word.substring(length / 2 - 1, length / 2 + 1);
-        } else
-            return Character.toString(word.charAt(length / 2));
+        } else {
+            return String.valueOf(word.charAt(length / 2));
+        }
     }
 }

@@ -3,3 +3,6 @@
 /.idea/workspace.xml
 /compiler.xml
 /.idea/codeStyles/
+/.idea/libraries/
+/target/
+/JavaTasks.iml

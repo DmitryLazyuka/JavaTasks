@@ -1,3 +1,5 @@
+package kyu_7;
+
 public class MiddleExample {
     public static String getMiddle(String word) {
         int length = word.length();

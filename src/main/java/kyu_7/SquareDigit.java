@@ -1,3 +1,5 @@
+package kyu_7;
+
 public class SquareDigit {
     public int squareDigits(int n) {
         StringBuilder builder = new StringBuilder();

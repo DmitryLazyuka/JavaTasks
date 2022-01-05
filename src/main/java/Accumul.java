@@ -3,11 +3,11 @@ public class Accumul {
     public static String accum(String s) {
 
         StringBuilder builder = new StringBuilder();
+        String[] characters = s.split("(?!^)");
 
-        for (int i = 0; i < s.length(); i++) {
-            String character = s.substring(i, i + 1);
-            builder.append(character.toUpperCase()).append(character.toLowerCase().repeat(i));
-            if (i != (s.length()) - 1) {
+        for (int i = 0; i < characters.length; i++) {
+            builder.append(characters[i].toUpperCase()).append(characters[i].toLowerCase().repeat(i));
+            if (i != (characters.length - 1)) {
                 builder.append("-");
             }
         }

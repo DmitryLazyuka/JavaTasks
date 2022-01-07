@@ -7,5 +7,7 @@ public class MultiplesTest {
     @Test
     public void test() {
         assertEquals(23, new Multiples().solution(10));
+        assertEquals(143, new Multiples().solution(25));
+        assertEquals(0, new Multiples().solution(-15));
     }
 }

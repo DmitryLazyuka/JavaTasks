@@ -8,8 +8,7 @@ import java.util.stream.Collectors;
 public class HighestAndLowest {
     public static String highAndLow(String numbers) {
 
-        List<Integer> listOfNumbers;
-        listOfNumbers =  Arrays.stream(numbers.split(" ")).map(Integer::valueOf).collect(Collectors.toList());
+        List<Integer> listOfNumbers = Arrays.stream(numbers.split(" ")).map(Integer::valueOf).collect(Collectors.toList());
 
         int max = Collections.max(listOfNumbers);
         int min = Collections.min(listOfNumbers);

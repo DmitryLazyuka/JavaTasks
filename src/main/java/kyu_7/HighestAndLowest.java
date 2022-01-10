@@ -15,4 +15,19 @@ public class HighestAndLowest {
 
         return max + " " + min;
     }
+
+    public static String highAndLow2(String numbers){
+
+        String[] arrayOfNumbers = numbers.split(" ");
+        int min = Integer.parseInt(arrayOfNumbers[0]);
+        int max = min;
+
+        for (String number: arrayOfNumbers) {
+            int temp = Integer.parseInt(number);
+            min = Math.min(temp, min);
+            max = Math.max(temp, max);
+        }
+
+        return max + " " + min;
+    }
 }

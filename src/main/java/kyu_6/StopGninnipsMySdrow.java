@@ -5,7 +5,7 @@ import java.util.List;
 
 public class StopGninnipsMySdrow {
 
-    public final String SPACE = " ";
+    private static final String SPACE = " ";
 
     public String spinWords(String sentence) {
         StringBuilder result = new StringBuilder();

@@ -2,30 +2,28 @@ package kyu_6;
 
 public class TakeATenMinuteWalk {
     public static boolean isValid(char[] walk) {
-        int countN=0;
-        int countW=0;
-        int countE=0;
-        int countS=0;
+        int x = 0;
+        int y = 0;
 
         if (walk.length != 10) {
             return false;
         }
-        for (Character direction : walk) {
+        for (char direction : walk) {
             switch (direction) {
+                case 's':
+                    x++;
+                    break;
                 case 'n':
-                    countN++;
+                    x--;
                     break;
                 case 'w':
-                    countW++;
-                    break;
-                case 's':
-                    countS++;
+                    y++;
                     break;
                 case 'e':
-                    countE++;
+                    y--;
                     break;
             }
         }
-        return countE == countW && countN == countS;
+        return x == 0 && y == 0;
     }
 }

@@ -7,7 +7,7 @@ public class StringToCamelCase {
         String[] array = s.split("[_|-]");
         StringBuilder builder = new StringBuilder(array[0]);
         for (int i = 1; i < array.length; i++) {
-            builder.append(array[i].substring(0, 1).toUpperCase()).append(array[i].substring(1).toLowerCase());
+            builder.append(array[i].replace(array[i].charAt(0),Character.toUpperCase(array[i].charAt(0))));
         }
         return builder.toString();
     }

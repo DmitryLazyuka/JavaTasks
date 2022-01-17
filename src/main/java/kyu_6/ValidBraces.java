@@ -1,16 +1,20 @@
 package kyu_6;
 
 public class ValidBraces {
-    static final String PARENTHESIS = "()";
-    static final String SQUARE_BRACKET = "[]";
-    static final String CURLY_BRACE = "{}";
+    private static final String PARENTHESIS = "()";
+    private static final String SQUARE_BRACKET = "[]";
+    private static final String CURLY_BRACE = "{}";
+    private static final String EMPTY_STRING = "";
 
     public boolean isValid(String braces) {
-        while (braces.contains(PARENTHESIS) || braces.contains(SQUARE_BRACKET) || braces.contains(CURLY_BRACE)) {
-            braces = braces.replace(PARENTHESIS, "")
-                    .replace(SQUARE_BRACKET, "")
-                    .replace(CURLY_BRACE, "");
-        }
+        int lengthBeforeIteration;
+
+        do {
+            lengthBeforeIteration = braces.length();
+            braces = braces.replace(PARENTHESIS, EMPTY_STRING)
+                    .replace(SQUARE_BRACKET, EMPTY_STRING)
+                    .replace(CURLY_BRACE, EMPTY_STRING);
+        } while (lengthBeforeIteration != braces.length());
         return braces.length() == 0;
     }
 }

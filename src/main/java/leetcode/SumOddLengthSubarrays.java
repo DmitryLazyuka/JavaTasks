@@ -4,13 +4,10 @@ public class SumOddLengthSubarrays {
     public static int sum(int[] arr) {
 
         int result = 0;
+        int length = arr.length;
 
-        for (int subLength = 1; subLength <= arr.length; subLength += 2) {
-            for (int index = 0; index + subLength <= arr.length; index++) {
-                for (int i = index, s = subLength; s > 0; i++, s--) {
-                    result += arr[i];
-                }
-            }
+        for (int i = 0; i < length; i++) {
+            result += (((i + 1) * (length - i) + 1) / 2) * arr[i];
         }
         return result;
     }

@@ -3,11 +3,16 @@ package leetcode;
 public class MaxWater {
     public static int maxArea(int[] height) {
 
+        int left = 0;
+        int right = height.length - 1;
         int maxArea = 0;
 
-        for (int i = 0; i < height.length - 1 && height[i] != 0; i++) {
-            for (int j = height.length - 1; j > i && height[j] != 0; j--) {
-                maxArea = Math.max(maxArea,Math.min(height[i], height[j]) * (j - i));
+        while (left < right) {
+            maxArea = Math.max(maxArea, Math.min(height[left], height[right]) * (right - left));
+            if (height[left] > height[right]) {
+                right--;
+            } else {
+                left++;
             }
         }
         return maxArea;

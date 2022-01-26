@@ -14,7 +14,7 @@ public class ValidMountainArray {
         }
 
         for (int i = 0; i < arr.length - 1; i++) {
-            if (!((i < maxIndex & arr[i] < arr[i + 1]) | (i >= maxIndex & arr[i] > arr[i + 1]))) {
+            if (!((i < maxIndex & arr[i] < arr[i + 1]) || (i >= maxIndex & arr[i] > arr[i + 1]))) {
                 return false;
             }
         }

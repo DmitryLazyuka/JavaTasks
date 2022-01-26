@@ -8,7 +8,7 @@ public class ValidMountainArray {
         if (arr.length < 3) {
             return false;
         }
-        if (arr[currentIndex] >= arr[currentIndex + 1] | arr[lastIndex - 1] <= arr[lastIndex]) {
+        if (arr[currentIndex] >= arr[currentIndex + 1] || arr[lastIndex - 1] <= arr[lastIndex]) {
             return false;
         }
 

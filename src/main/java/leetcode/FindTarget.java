@@ -11,7 +11,6 @@ public class FindTarget {
         int quantity = 0;
 
         for (int number : nums) {
-
             if (number < target) {
                 firstIndex++;
             } else if (number == target) {

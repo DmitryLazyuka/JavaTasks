@@ -17,12 +17,8 @@ public class FindTarget {
                 quantity++;
             }
         }
-        if (quantity == 1) {
-            result.add(firstIndex);
-        } else {
-            for (int i = 0; i < quantity; i++) {
-                result.add(firstIndex + i);
-            }
+        for (int i = 0; i < quantity; i++) {
+            result.add(firstIndex + i);
         }
         return result;
     }
